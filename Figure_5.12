@@ -1,0 +1,23 @@
+5.12,
+
+//Psuedocode for the examination-results problem
+
+Initialize passes to zero
+Initialize failures to zero
+Initialize student counter to one
+
+While student counter is less than or equal to 10
+    Prompt the user to enter the next exam result
+    Input the next exam result
+
+    If the student passed
+        Add one to passes
+    Else
+        Add one to failures
+    
+    Add one to student counter
+    Display the number of passes
+    Display the number of failures
+
+    If more than eight students passed
+        Display "Bonus to instructor!"
