@@ -1,0 +1,66 @@
+5.5,
+
+using System;
+
+class Student
+{
+
+public string Name { get; set; } // property
+private int average; //instance variable
+
+// constructor initializes Name and average properties
+public Student(string studentName, int studentAverage)
+{
+    Name = studentName;
+    Average = studentAverage; // sets average instance variable
+}
+// property to get and set instance variable average
+public int Average
+{
+    get // returns the student's average
+    {
+        return average;
+    }
+    set // sets the student's average
+    {
+        // validate that value is > 0 and <= 100; otherwise,
+        // keep instance variable average's current value
+        if (value > 0)
+        {
+            if (value <= 100)
+            {
+                average = value; // assign to instance variable
+            }
+        }
+    }
+}
+// returns the Student's letter grade, based on the average
+string LetterGrade
+{
+    get
+    {
+        string lettergrade = string.Empty; // string.Empty is ""
+        if (average >= 90)
+        {
+            lettergrade = "A";
+        }
+        else if (average >= 80)
+        {
+            lettergrade = "B";
+        }
+        else if (average >= 70)
+        {
+            lettergrade = "C";
+        }
+        else if (average >= 60)
+        {
+            lettergrade = "D";
+        }
+        else
+        {
+            lettergrade = "F";
+        }
+        return lettergrade;
+    }
+}
+}
